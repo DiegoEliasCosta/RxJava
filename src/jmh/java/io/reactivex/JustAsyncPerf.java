@@ -107,77 +107,77 @@ public class JustAsyncPerf {
 
     @Benchmark
     public void subscribeOnFlowable(Blackhole bh) {
-        subscribeOnFlowable.subscribeWith(new PerfAsyncConsumer(bh)).await(1);
+        bh.consume(subscribeOnFlowable.subscribeWith(new PerfAsyncConsumer(bh)).await(1));
     }
 
     @Benchmark
     public void observeOnFlowable(Blackhole bh) {
-        observeOnFlowable.subscribeWith(new PerfAsyncConsumer(bh)).await(1);
+    	bh.consume(observeOnFlowable.subscribeWith(new PerfAsyncConsumer(bh)).await(1));
     };
 
     @Benchmark
     public void pipelineFlowable(Blackhole bh) {
-        pipelineFlowable.subscribeWith(new PerfAsyncConsumer(bh)).await(1);
+    	bh.consume(pipelineFlowable.subscribeWith(new PerfAsyncConsumer(bh)).await(1));
     };
 
     @Benchmark
     public void subscribeOnObservable(Blackhole bh) {
-        subscribeOnObservable.subscribeWith(new PerfAsyncConsumer(bh)).await(1);
+    	bh.consume(subscribeOnObservable.subscribeWith(new PerfAsyncConsumer(bh)).await(1));
     };
 
     @Benchmark
     public void observeOnObservable(Blackhole bh) {
-        observeOnObservable.subscribeWith(new PerfAsyncConsumer(bh)).await(1);
+    	bh.consume(observeOnObservable.subscribeWith(new PerfAsyncConsumer(bh)).await(1));
     };
 
     @Benchmark
     public void pipelineObservable(Blackhole bh) {
-        pipelineObservable.subscribeWith(new PerfAsyncConsumer(bh)).await(1);
+    	bh.consume(pipelineObservable.subscribeWith(new PerfAsyncConsumer(bh)).await(1));
     };
 
     @Benchmark
     public void observeOnSingle(Blackhole bh) {
-        observeOnSingle.subscribeWith(new PerfAsyncConsumer(bh)).await(1);
+    	bh.consume(observeOnSingle.subscribeWith(new PerfAsyncConsumer(bh)).await(1));
     };
 
     @Benchmark
     public void subscribeOnSingle(Blackhole bh) {
-        subscribeOnSingle.subscribeWith(new PerfAsyncConsumer(bh)).await(1);
+    	bh.consume(subscribeOnSingle.subscribeWith(new PerfAsyncConsumer(bh)).await(1));
     };
 
     @Benchmark
     public void pipelineSingle(Blackhole bh) {
-        pipelineSingle.subscribeWith(new PerfAsyncConsumer(bh)).await(1);
+    	bh.consume(pipelineSingle.subscribeWith(new PerfAsyncConsumer(bh)).await(1));
     };
 
     @Benchmark
     public void observeOnCompletable(Blackhole bh) {
-        observeOnCompletable.subscribeWith(new PerfAsyncConsumer(bh)).await(1);
+    	bh.consume(observeOnCompletable.subscribeWith(new PerfAsyncConsumer(bh)).await(1));
     };
 
     @Benchmark
     public void subscribeOnCompletable(Blackhole bh) {
-        subscribeOnCompletable.subscribeWith(new PerfAsyncConsumer(bh)).await(1);
+    	bh.consume(subscribeOnCompletable.subscribeWith(new PerfAsyncConsumer(bh)).await(1));
     };
 
     @Benchmark
     public void pipelineCompletable(Blackhole bh) {
-        pipelineCompletable.subscribeWith(new PerfAsyncConsumer(bh)).await(1);
+    	bh.consume(pipelineCompletable.subscribeWith(new PerfAsyncConsumer(bh)).await(1));
     };
 
     @Benchmark
     public void observeOnMaybe(Blackhole bh) {
-        observeOnMaybe.subscribeWith(new PerfAsyncConsumer(bh)).await(1);
+    	bh.consume(observeOnMaybe.subscribeWith(new PerfAsyncConsumer(bh)).await(1));
     };
 
     @Benchmark
     public void subscribeOnMaybe(Blackhole bh) {
-        subscribeOnMaybe.subscribeWith(new PerfAsyncConsumer(bh)).await(1);
+    	bh.consume(subscribeOnMaybe.subscribeWith(new PerfAsyncConsumer(bh)).await(1));
     };
 
     @Benchmark
     public void pipelineMaybe(Blackhole bh) {
-        pipelineMaybe.subscribeWith(new PerfAsyncConsumer(bh)).await(1);
+    	bh.consume(pipelineMaybe.subscribeWith(new PerfAsyncConsumer(bh)).await(1));
     };
 
 }
